@@ -74,10 +74,10 @@ app.post('/dosearches', (request, response) => {
       let movi = movie.map(val => {
         // console.log('val : ', val);
         let moviesConst = new Movie(val);
-        // console.log('movies : ', movi)
         return moviesConst;
-
+        
       })
+      // console.log('movies : ', movi)
       response.render('../views/pages/result', { data: movi })
     })
 });
@@ -148,6 +148,11 @@ app.get('/previous', (request, response) => {
   page = page - 1;
   response.redirect('/')
 })
+
+// app.post('/nextS', (request, response) => {
+//   page = page + 1;
+//   response.redirect('/dosearches')
+// })
 
 
 
