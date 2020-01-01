@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>fav</title>
+
+    <link rel="stylesheet" href="/public/styles/base.css">
+    <link rel="stylesheet" href="/public/styles/layout.css">
+    <link rel="stylesheet" href="/public/styles/modules.css">
+    
+</head>
+<body id="favbody">
+     
+    
+<div id="coloredDiv1">
+        <p id="div1ID">YOUR FAVORITE MOVIES!!</p>
+    </div>
+    <main>
+
+    <!-- <button>Home Page</button> -->
+    <nav><form action="/">
+            </form></nav> 
+    
+            <div id="loopdiv">
+    <%  data.forEach((val)=>{ %>
+        <!-- <div> <ul><li> -->
+            <br/>
+            <img id="favloopedpic" src="<%= val.poster_path %>"><br/>
+         <p id="para1">   Title: <%= val.title %> <br/> </p>
+       <p id="para1"> Overview: <%= val.overview %> </p>
+    </div>
+    <!-- </li></ul></div> -->
+    <div  id="favForm">
+        <form action="/edit/<%- val.id %>" method="POST">
+             <input type="hidden"  value="put" name="_method">
+                <textarea name="title" cols="30" rows="10" ><%= val.title %></textarea>
+                <input type="hidden" name="poster_path" value=<%= val.poster_path %>>
+                <textarea name="overview"cols="30" rows="10" ><%= val.overview %></textarea>
+                <input id="textid" type="text" name="popularity" value=<%= val.popularity %>>
+                <input id="textid" type="text" name="vote_average" value=<%= val.vote_average %>>
+                <input id="textid" type="text" name="release_date" value=<%= val.release_date %>>
+                <br/>
+                <button id="favButton">Edit this item</button>
+                
+            </form>     
+            <form action="/delete/<%- val.id %>" method="POST">
+                <button id="favButton2">Delete from My Favorites</button>
+                <input type="hidden"  value="delete" name="_method">
+                <br/>
+              
+            </form>
+       </div>
+   
+    
+    
+
+    <% })    %>
+    
+</main>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

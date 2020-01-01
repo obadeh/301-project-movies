@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>search</title>
+    <link rel="stylesheet" href="/public/styles/base.css">
+    <link rel="stylesheet" href="/public/styles/layout.css">
+   <link rel="stylesheet" href="/public/styles/modules.css">
+  
+</head>
+<body id="body2">
+<header>
+    
+                   
+
+    </header>
+    <img  id="img1" src="pics/pic1.jpg">
+</div>
+<div>
+        <img id="img2" src="pics/pic2.jpg">
+    </div>
+    <div>
+            <img  id="img3" src="pics/pic3.jpg">
+        </div>
+
+    <div id="mainDiv">
+<div id="div1Two">
+    <!-- <p>Disscover The:</p> -->
+<form action="/dosearches" method="POST">
+    Most Popular <input type="radio" name="disc" value="popularity"> <br>
+    Box Office <input type="radio" name="disc" value="revenue"> <br>
+    <input type="text" name="year" placeholder="Release date (optional)">
+    <br/>
+    <button id="button1">Discover</button>
+
+</form>
+</div>
+
+<div id="div2Two">
+    <p>Search by title:</p>
+<form action="/searchbox" method="POST">
+<input type="text" name="box" placeholder="Title">
+<br/>
+<button id="button1">Search</button>
+</form>
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

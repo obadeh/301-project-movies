@@ -1,0 +1,30 @@
+#mainOne{
+    background-color: black;
+    color:white;
+}
+/* background-color: rgb(14, 13, 13); */
+#body2{
+    background-color: rgba(215, 219, 222, 0.701); 
+ }
+
+
+/* background-repeat: no-repeat, repeat; */
+
+#mainShow{
+    /* background-color: rgb(223, 223, 223); */
+    background-color: white;
+    color: white;
+}
+
+
+
+
+#mainOne-det{
+    /* background-color: rgb(223, 223, 223); */
+    background-color: rgb(255, 255, 255);
+    color: white;
+
+}
+#favbody{
+    background:radial-gradient(#02041f90,  rgb(18, 14, 58)) fixed;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/styles/base.css">
+  <link rel="stylesheet" href="/public/styles/layout.css">
+ <link rel="stylesheet" href="/public/styles/modules.css">
+
+</head>
+<body id="mainOne">
+  <main> 
+      <img id="joker" src="pics/jokerr1.jpg">
+      <div class="top-left">TOP RATED<br/>MOVIES</div>
+      <p id="quotations">“</p>
+      <a href="/previous">Previous Page</a>
+    <a href="/next">Next Page</a>
+      
+<nav id="navOne">
+      <!-- <form action="/search"> -->
+       <ul id="listOne"><li>
+         <a href="/search">
+         Search
+         </a>
+        </li>
+      </ul>
+      <!-- </form> -->
+      <!-- <form action="/show"> -->
+        <ul id="listTwo"><li>
+            <a href="/show">
+            My Favorites
+            </a>
+           </li>
+         </ul>
+         <ul id="listThree"><li>
+            <a href="/">
+            Home Page
+            </a>
+           </li>
+         </ul>
+      <!-- </form> -->
+    </nav>
+    
+<div id="allMovies">
+    <%  data.forEach((val)=>{ %>
+        <div> <ul>
+          <li>
+            <div id="divTwo">
+        <p id="pOne"> <%= val.title %> </p>
+        <p id="lines">____________________________________________________________</p>
+        <div id="images">
+        <p> <img id="imageOne" src="<%= val.poster_path %>" > </p>
+      </div>
+      <div id="ps">
+        <p id="pTwo">  <%= val.overview %> </p>
+        <p id="lines">____________________________________________________________</p>
+      
+        <p id="pThree">popularity: <%= val.popularity %> </p>
+      
+      
+        <p id="pFour"> vote average: <%= val.vote_average %> </p>
+      
+      
+        <p id="pFive">release date: <%= val.release_date%></p>
+    </div>
+    </div>
+    </li></ul></div>
+   
+    <% })    %>
+    <a href="/previous">Previous Page</a>
+    <a href="/next">Next Page</a>
+</div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+  </main>
+</body>
+</html>

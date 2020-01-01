@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>show</title>
+
+    <link rel="stylesheet" href="/public/styles/base.css">
+    <link rel="stylesheet" href="/public/styles/layout.css">
+   <link rel="stylesheet" href="/public/styles/modules.css">
+  
+</head>
+<body id="mainShow">
+    <main>
+
+            <img id="shia" src="../../pics/shia-lebeouf.png">
+            <div class="top-left-disc">Discover and Watch <br/>MOVIES</div>
+            <p id="quotations-disc">“</p>
+            
+        <nav id="navOne-disc"><ul id="listThree-disc"><li><a href="/">Home Page</a></li></ul> 
+        
+            <ul id="listOne-disc"><li>
+                    <a href="/search">
+                    Search
+                    </a>
+                   </li>
+                 </ul>
+                 <!-- </form> -->
+                 <!-- <form action="/show"> -->
+                   <ul id="listTwo-disc"><li>
+                       <a href="/show">
+                       My Favorites
+                       </a>
+                      </li>
+                    </ul></nav>
+       
+
+<div id="allMovies-disc">
+        <%  data.forEach((val)=>{ %>
+            <div> 
+              <ul>
+              <li>
+                <div id="divTwo-disc">
+            <p id="pOne-disc"> <%= val.title %> </p>
+            <p id="lines-disc">____________________________________________________________</p>
+            <div id="images-disc">
+            <p> <img id="imageOne-disc" src="<%= val.poster_path %>" > </p>
+          </div>
+          <div id="ps-disc">
+            <p id="pTwo-disc">  <%= val.overview %> </p>
+            <p id="lines-disc">____________________________________________________________</p>
+          <p id="pThree-disc">popularity: <%= val.popularity %>  </p>
+          <p id="pFour-disc"> vote average: <%= val.vote_average %> </p>
+          <p id="pFive-disc">release date:  <%= val.release_date%> </p>
+            <form action="/selectMovie" method="POST">
+                <button id="button-disc">SELECT THIS MOVIE</button>
+                <textarea name="title" cols="30" rows="10" ><%= val.title %></textarea>
+                <input type="hidden" name="poster_path" value=<%= val.poster_path %>>
+                <textarea name="overview"cols="30" rows="10" ><%= val.overview %></textarea>
+                <input type="hidden" name="popularity" value=<%= val.popularity %>>
+                <input type="hidden" name="vote_average" value=<%= val.vote_average %>>
+                <input type="hidden" name="release_date" value=<%= val.release_date %>>
+
+                <input type="hidden" name="id" value=<%= val.id %>>
+
+
+        
+            </form>
+
+            
+        </div>
+        
+         
+
+        </div>
+      </li>
+      </ul>
+      </div>
+       <% })    %>
+
+</div>
+
+</main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

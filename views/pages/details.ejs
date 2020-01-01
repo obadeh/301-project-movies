@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>details</title>
+    
+    <link rel="stylesheet" href="/public/styles/base.css">
+    <link rel="stylesheet" href="/public/styles/layout.css">
+   <link rel="stylesheet" href="/public/styles/modules.css">
+   <link rel="stylesheet" href="/public/styles/details.css">
+  
+</head>
+<body id="mainOne-det">
+    <main>
+            <img id="poster" src="<%= data.poster_path %>">
+
+    
+      <div> <ul>
+        <li>
+          <div id="divTwo-det">
+      <p id="pOne-det"> <%= data.title %> </p>
+      <p id="lines-det">____________________________________________________________</p>
+      <div id="images-det">
+      <p> <img id="imageOne-det" src="<%= data.poster_path %>" > </p>
+    </div>
+    <div id="ps-det">
+      <p id="pTwo-det">  <%= data.overview %> </p>
+      <p id="lines-det">____________________________________________________________</p>
+    
+      <p id="pThree-det">popularity: <%= data.popularity %> </p>
+    
+    
+      <p id="pFour-det"> vote average: <%= data.vote_average %> </p>
+    
+    
+      <p id="pFive-det">release date: <%= data.release_date%></p>
+      <iframe id="trailer" width="560" height="315" data-id="<%= data.id %>" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <form action="/add" method="POST">
+        <button id="button-det">Add to MyFavorit</button>
+        <textarea name="title" cols="30" rows="10" ><%= data.title %></textarea>
+        <input type="hidden" name="poster_path" value=<%= data.poster_path %>>
+        <textarea name="overview"cols="30" rows="10" ><%= data.overview %></textarea>
+        <input type="hidden" name="popularity" value=<%= data.popularity %>>
+        <input type="hidden" name="vote_average" value=<%= data.vote_average %>>
+        <input type="hidden" name="release_date" value=<%= data.release_date %>>
+
+    </form>  
+    
+    
+
+  </div>
+  </div>
+  </li></ul></div>
+
+        
+
+</main>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
