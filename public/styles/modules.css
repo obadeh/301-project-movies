@@ -20,7 +20,7 @@
     left: 70%;
     transform: translate(-50%, -50%);
     font-size: 63px;
-    font-family: Impact, fantasy;
+    /* font-family: Impact, fantasy; */
     color:rgba(247, 247, 247, 0.769)
 }
 #joker {-webkit-filter: contrast(100%);filter: contrast(150%);}
@@ -556,7 +556,9 @@ border-radius: 20px;
 #lines{
     display: none;
 }
-
+#pOne {
+font-size: 22px;
+}
 /* end of main page */
 
 
