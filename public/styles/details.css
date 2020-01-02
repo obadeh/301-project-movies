@@ -160,3 +160,33 @@ border-radius: 20px;
     #divTwo-det{
         position: relative;
     }
+
+   @media only screen and (max-width: 400px){
+
+    #trailer{
+        right: 1px;
+        top: 687px;
+        width: 260px;
+        height: auto;
+    }
+    #poster{
+        height: 100px;
+    }
+    #pTwo-det{
+        width: 250px;
+        margin-left: 11px;
+        height: 376px;
+    }
+    #divTwo-det{
+        margin: -15px;
+        width: 100%;
+        height: 912px;
+    
+    }
+    #imageOne-det{
+        display: none;
+    }
+    #lines-det{
+        display: none;
+    }
+   }
