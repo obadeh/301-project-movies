@@ -17,7 +17,8 @@
 .top-left{
     position: absolute;
     top: 35%;
-    left: 70%;
+    left: 85%;
+
     transform: translate(-50%, -50%);
     font-size: 63px;
     /* font-family: Impact, fantasy; */
@@ -65,8 +66,8 @@ ul{
 #quotations{
     font-size:200px;
     position: absolute;
-    top: -5%;
-    left: 55%;
+    top: -27%;
+    left: 69%;
     color:maroon ;
 }
 #imageOne{
